@@ -1,6 +1,6 @@
 
 /* Component:
-- function that returns one object that represents an HTML element
+- function that returns JSX, which is one object that represents an HTML element
 - parenthesis are optional but allow you to move to the next line after `return`
 */
 function Section() {
@@ -20,3 +20,17 @@ ReactDOM.render(
 // viewing the output shows us that the React element is a JS object
 const element = <h1 className="red">This is my section</h1>;
 console.log(element);
+
+// JSX can be saved into a variable, as it is just an object
+const nav = (
+    <nav>
+        <h1>Dillo Dally</h1>
+        <ul>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+);
+
+ReactDOM.render(nav, document.getElementById("root"));
